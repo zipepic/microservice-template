@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: jagerTrace
+
+tracing:
+  url: http://10.7.0.5:55680/v1/traces
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+
+logging:
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+
+
