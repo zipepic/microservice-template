@@ -16,6 +16,9 @@
     <url/>
     <licenses>
         <license/>
+
+
+
     </licenses>
     <developers>
         <developer/>
@@ -59,7 +62,7 @@
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-exporter-otlp</artifactId>
         </dependency>
-        <!--for Trace-->
+<!--for Trace-->
 
 
 <!--for ELK-->
@@ -69,7 +72,7 @@
             <version>7.4</version>
         </dependency>
 
-        <!--for ELK-->
+<!--for ELK-->
 
 
 <!--for prometeus-->
@@ -78,7 +81,7 @@
             <artifactId>micrometer-registry-prometheus</artifactId>
             <!--			<scope>runtime</scope>-->
         </dependency>
-        <!--for prometeus-->
+<!--for prometeus-->
     </dependencies>
 
     <build>
